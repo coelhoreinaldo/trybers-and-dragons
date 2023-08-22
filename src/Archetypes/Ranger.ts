@@ -18,9 +18,3 @@ export default class Ranger extends Archetype {
     return this._energyType;    
   }
 }
-
-// const Ranger1 = new Ranger('Xd')
-// console.log(Ranger1.energyType);
-// console.log(Ranger1.createdArchetypeInstances)
-// const Ranger2 = new Ranger('Xd')
-// console.log(Ranger2.createdArchetypeInstances)

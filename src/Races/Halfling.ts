@@ -1,5 +1,3 @@
-// req 2 - create Halfling class
-
 import Race from './Race';
 
 export default class Halfling extends Race {
@@ -22,8 +20,3 @@ export default class Halfling extends Race {
     return Halfling.createdHalflingInstances;
   }
 }
-
-// const Halfling1 = new Halfling();
-// console.log(  Halfling1.createdRacesInstances);
-// const Halfling2 = new Halfling();
-// console.log(  Halfling2.createdRacesInstances);

@@ -1,5 +1,3 @@
-// req 2 - create Orc class
-
 import Race from './Race';
 
 export default class Orc extends Race {
@@ -22,8 +20,3 @@ export default class Orc extends Race {
     return Orc.createdOrcInstances;
   }
 }
-
-// const Orc1 = new Orc();
-// console.log(  Orc1.createdRacesInstances);
-// const Orc2 = new Orc();
-// console.log(  Orc2.createdRacesInstances);

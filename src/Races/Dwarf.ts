@@ -20,10 +20,3 @@ export default class Dwarf extends Race {
     return Dwarf.createdDwarfInstances;
   }
 }
-
-// const dwarf1 = new Dwarf();
-// console.log(dwarf1.dexterity);
-
-// console.log(  dwarf1.createdRacesInstances);
-// const dwarf2 = new Dwarf();
-// console.log(  dwarf2.createdRacesInstances);

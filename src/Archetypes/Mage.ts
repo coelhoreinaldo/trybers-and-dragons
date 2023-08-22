@@ -18,9 +18,3 @@ export default class Mage extends Archetype {
     return this._energyType;    
   }
 }
-
-// const mage1 = new Mage('Xd')
-// console.log(mage1.energyType);
-// console.log(mage1.createdArchetypeInstances)
-// const mage2 = new Mage('Xd')
-// console.log(mage2.createdArchetypeInstances)

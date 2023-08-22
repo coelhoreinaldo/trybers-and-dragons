@@ -20,8 +20,3 @@ export default class Elf extends Race {
     return Elf.createdElfInstances;
   }
 }
-
-// const Elf1 = new Elf();
-// console.log(  Elf1.createdRacesInstances);
-// const Elf2 = new Elf();
-// console.log(  Elf2.createdRacesInstances);

@@ -18,9 +18,3 @@ export default class Necromancer extends Archetype {
     return this._energyType;    
   }
 }
-
-// const Necromancer1 = new Necromancer('Xd')
-// console.log(Necromancer1.energyType);
-// console.log(Necromancer1.createdArchetypeInstances)
-// const Necromancer2 = new Necromancer('Xd')
-// console.log(Necromancer2.createdArchetypeInstances)

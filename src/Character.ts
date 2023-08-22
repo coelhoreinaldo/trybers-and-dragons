@@ -74,8 +74,4 @@ export default class Character implements Fighter {
     this._energy.amount = 10;
     this._lifePoints = this._maxLifePoints;
   }
-
-  // special(enemy: SimpleFighter): void {
-  //   console.log(':P');
-  // }
 }
