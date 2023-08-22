@@ -6,7 +6,6 @@ services:
     # Imagem base do container
     image: node:16.14.2
     # Usuário linux padrão do container
-    user: node
     # Nome do container para facilitar execução
     container_name: trybers_and_dragons
     # Mesmo que `docker run -t`
