@@ -4,7 +4,7 @@ import Energy from './Energy';
 import Fighter from './Fighter';
 import Elf from './Races/Elf';
 import Race from './Races/Race';
-import getRandomInt, { energyObj } from './utils';
+import getRandomInt, { formatEnergyObject } from './utils';
 
 export default class Character implements Fighter {
   private _race: Race;
@@ -21,12 +21,15 @@ export default class Character implements Fighter {
   ) {
     this._dexterity = getRandomInt(1, 10);
     this._race = new Elf(this._name, this._dexterity);
-    this._archetype = new Mage('Armas');
+    this._archetype = new Mage(this._name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._maxLifePoints;
     this._strength = getRandomInt(1, 10);
     this._defense = getRandomInt(1, 10);
-    this._energy = energyObj(this._archetype.energyType, getRandomInt(1, 10));
+    this._energy = formatEnergyObject(
+      this._archetype.energyType,
+      getRandomInt(1, 10),
+    );
   }
 
   get race():Race { return this._race; }
@@ -36,10 +39,7 @@ export default class Character implements Fighter {
   get defense():number { return this._defense; }
   get dexterity():number { return this._dexterity; }
   get energy():Energy {
-    return { 
-      type_: this._energy.type_,
-      amount: this._energy.amount,
-    }; 
+    return formatEnergyObject(this._energy.type_, this._energy.amount);
   }
 
   receiveDamage(attackPoints: number): number {
@@ -63,10 +63,16 @@ export default class Character implements Fighter {
   }
 
   levelUp(): void {
-    this._maxLifePoints += 1;
-    this._strength += 1;
-    this._dexterity += 1;
-    this._defense += 1;
+    this._maxLifePoints += getRandomInt(1, 10);
+    if (this._maxLifePoints > this._race.maxLifePoints) {
+      this._maxLifePoints = this._race.maxLifePoints;
+    }
+    this._strength += getRandomInt(1, 10);
+    this._dexterity += getRandomInt(1, 10);
+    this._defense += getRandomInt(1, 10);
+
+    this._energy.amount = 10;
+    this._lifePoints = this._maxLifePoints;
   }
 
   // special(enemy: Fighter): void {

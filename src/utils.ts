@@ -8,7 +8,7 @@ function getRandomInt(min: number, max: number) {
 
 export default getRandomInt;
 
-export function energyObj(type_: EnergyType, amount: number) {
+export function formatEnergyObject(type_: EnergyType, amount: number) {
   return {
     type_,
     amount,
