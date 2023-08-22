@@ -1,3 +1,5 @@
+import { EnergyType } from './Energy';
+
 function getRandomInt(min: number, max: number) {
   const newMin = Math.ceil(min);
   const newMax = Math.floor(max);
@@ -5,3 +7,10 @@ function getRandomInt(min: number, max: number) {
 }
 
 export default getRandomInt;
+
+export function energyObj(type_: EnergyType, amount: number) {
+  return {
+    type_,
+    amount,
+  };
+}
